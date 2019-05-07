@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="wordcount.css">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!--구글폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Lato|Jua|Gugi|Nanum+Gothic" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <style>
+            body{padding-top:70px;}
+        
+        </style>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand">GooPago</a>
+                        </div>
+                    
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                            <li><a href="{%url 'home'%}">Home<span class="sr-only">(current)</span></a></li>
+                            <li><a href="{%url 'about'%}">About</a></li>
+                            <li class="active"><a href="">Result</a></li>
+        
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+            </nav>
+    <h1 style="text-align: center" id="lenwords"> 당신이 입력한 텍스트는 총 <!--단어개수-->{{lenwords}}개의 단어로 구성되어 있습니다. </h1>
+    <div class="container2">
+    <h3 style="text-align: center"><a href="{%url 'home'%}" id="again"><span class="label label-warning">다시하기</span></a></h3>
+    <br>
+    <h2 id="inputtext">입력한 텍스트 : </h2>
+    <p id="contents1">
+    <!--입력받은 전체텍스트-->
+    {{full}}<br><br>
+
+    <!--디렉토리에 텍스트 파일 만들기-->
+    <h4>저장하려는 텍스트 파일의 이름과 저장경로를 입력하세요.<br></h4>
+    (ex. "C:\Users\Mingman\Desktop)
+    <form action="{%url 'saved'%}">
+        파일 이름 :
+        <input type="text" name="filename"></textarea><br>
+        저장경로 :
+        <input type="text" name="dir"></textarea>
+        <input type="submit" value="저장하기">
+    </form>
+    </p>
+    <h2 id="wordcount"> 단어 카운트 : </h2>
+    <p id="contents2">
+    <!-- '단어'-'단어가 나온 횟수'-->
+    {% for word, howmany in dictionary%}
+    {{word}} : {{howmany}}번
+    <br>
+    {%endfor%}
+
+    <br>
+    <h4>영어->한국어 번역결과<br></h4>
+    {{trans_to_ko}}<br>
+    <h4>한국어 -> 영어 번역결과<br></h4>
+    {{trans_to_en}}
+</p>
+</div>
+</body>
+</html>

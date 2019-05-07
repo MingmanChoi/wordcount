@@ -1,0 +1,55 @@
+#goopago{
+    color: darkolivegreen;
+    text-shadow: 3px 2px 2px white;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: #d6f8b8;
+}
+.container-fluid{
+    background-color: whitesmoke;
+
+}
+#bottomblank{
+    background-color: #acdeaa;
+}
+.container1{
+    background-image: url('green.jpg');
+    background-color: #acdeaa;
+}
+
+#explain{
+    padding-top: 20px;
+    margin-left: 400px;
+    font-size: 14pt;
+    font-family: 'Jua', sans-serif;
+}
+#intro{
+    font-family: 'Gugi', cursive;
+}
+#lenwords{
+    font-family: 'Jua', sans-serif;
+}
+
+.container2{
+    margin-left: 400px;
+}
+#inputtext{
+    font-family: 'Do Hyeon', sans-serif;
+}
+#wordcount{
+    font-family: 'Do Hyeon', sans-serif;
+}
+#contents1{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#contents2{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#again{
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+}
+.saved{
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    
+}

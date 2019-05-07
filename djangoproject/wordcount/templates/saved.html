@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="wordcount.css">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!--구글폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Lato|Jua|Gugi|Nanum+Gothic" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+        <style>
+                body{padding-top:70px;}
+            
+            </style>
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand">GooPago</a>
+                            </div>
+                        
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                <li><a href="{%url 'home'%}">Home<span class="sr-only">(current)</span></a></li>
+                                <li><a href="{%url 'about'%}">About</a></li>
+            
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                            </div><!-- /.container-fluid -->
+                </nav>
+    <div class="saved">
+    <h1>저장되었습니다!<br></h1>
+    <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+              선택하세요
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="{%url 'home'%}" >Home으로</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onClick="history.back()">이전페이지로</a></li>
+            </ul>
+          </div>
+
+
+
+    <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              선택하세요
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{%url 'home'%}" >Home으로</a></li>
+              <li><a href="#" onClick="history.back()">이전페이지로</a></li>
+            </ul>
+          </div>
+
+
+
+
+
+
+    <a href="#" onClick="history.back()">결과 페이지로 돌아가기</a><br>
+    <a href="{%url 'home'%}">Home으로 돌아가기</a>
+</div>
+</body>
+</html>
